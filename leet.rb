@@ -1,30 +1,16 @@
-input_line = gets
-strings = input_line.to_s.split('')
+a = gets.to_s.split('')
 
 convert = []
-strings.each do |chara|
-  #ここにループ内で行う処理
-  case chara
-  when "A" then
-    # 処理
-    convert.push("4")
-  when "E" then
-    # 処理
-    convert.push("3")
-  when "G" then
-    # 処理
-    convert.push("6")
-  when "I" then
-    # 処理
-    convert.push("1")
-  when "O" then
-    # 処理
-    convert.push("0")
-  else # どれにも当てはまらないとき
-    # 処理
+a.each do |chara|
+  if chara == "A"
+    convert.push(4)
+  elsif chara == "Z"
+    convert.push(2)
+  elsif chara == "O"
+    convert.push(0)
+  else
     convert.push(chara)
   end
 end
 
-output = convert.join
-puts output
+puts convert.join
