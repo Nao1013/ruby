@@ -1,21 +1,23 @@
+# 文字変換
+# A→４　B→３　Z→２　Ｇ→６に変換せよ
+
 a = gets.to_s.chomp.split('')
 
-input=[]
-
+convers = []
 a.each do |chara|
-  if chara == "A"
-    input.push("4")
-  elsif chara == "E"
-    input.push("3")
+  if chara == "w"
+    convers.push("W")
+  elsif chara == "p"
+    convers.push("P")
+  elsif chara == "A"
+    convers.push("4")
+  elsif chara == "B"
+    convers.push("3")
   elsif chara == "G"
-    input.push("6")
-  elsif chara == "I"
-    input.push("1")
-  elsif chara == "O"
-    input.push("0")
+    convers.push("6")
   else
-    input.push(chara)
+    convers.push(chara)
   end
 end
 
-p input.join
+puts convers.join

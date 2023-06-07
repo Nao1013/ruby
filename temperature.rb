@@ -10,16 +10,16 @@ room = gets.to_i
 air = gets.to_i
 windy = gets.to_i
 
-diff = (room - air).abs
+time = (room - air).abs
 
-temperature = 0
-if diff < 5
-  temperature = 15
-elsif diff >= 5 && diff < 10
-  temperature = 30
-elsif diff >= 10
-  temperature = 60
+if time < 5
+  time = 15
+elsif time >= 5 && time < 10
+  time = 30
+elsif time >= 10
+  time = 60
 end
+
 
 # 風量によって設定温度になるまでの時間に変化を作る
 # ・標準入力に風量値を追加
@@ -35,14 +35,14 @@ end
 # ・1~3以外の入力の場合には"風量の値は1~3にしてください"と出力して、プログラムを終了
 
 if windy == 1
-  temperature
+  time
 elsif windy == 2
-  temperature = temperature - 5
+  time = time - 5
 elsif windy == 3
-  temperature = temperature - 10
+  time = time - 10
 else
   puts "風量の値は1~3にしてください"
   exit
 end
 
-p temperature
+puts time
